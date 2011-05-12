@@ -15,9 +15,8 @@ __cwd__ = sys.modules[ "__main__" ].__cwd__
 #enable localization
 getLS   = sys.modules[ "__main__" ].__language__
 
-#TODO external python?
+
 #TODO change variable names etc from old hidden and details
-#TODO Move wicd check to intit and disable buttons if needed
 #TODO check for network mamnager
 
 class GUI(xbmcgui.WindowXMLDialog):
