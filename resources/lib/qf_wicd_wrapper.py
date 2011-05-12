@@ -191,6 +191,7 @@ def disconnect_wireless():
 	if wireless.GetCurrentNetworkID(0) > -1:
 			print "Disconnecting from %s on %s" % (wireless.GetCurrentNetwork(0),
 					wireless.DetectWirelessInterface())
+            
 def save_wireless(network_id):
     if not network_id >= 0:
         return False
@@ -280,6 +281,18 @@ def connect_wireless(network_id,key):
 			last = next
 	print "done!"
 
+
+def remove_auto(network_id):
+    #While waiting for full confg we to remove auto (set automatic => 0)
+    if is_valid_wireless_network_id(network_id) == False:
+        print "Not a valid network_id"
+        return
+
+    wireless.SetWirelessProperty(network_id, 'automatic', 0)
+    print "automatic set = 0"
+    wireless.SaveWirelessNetworkProfile(network_id)
+    
+    print "saved"
 	
 def connect_wireless_ssid(ssid, key):
 	ssid2id_dict = get_ssid2id_dict()
@@ -307,6 +320,8 @@ def get_wireless_networks():
         net_dict['bssid'] = wireless.GetWirelessProperty(network_id , 'bssid')
         net_dict['essid'] = wireless.GetWirelessProperty(network_id , 'essid')
         net_dict['signal'] = daemon.FormatSignalForPrinting(str(wireless.GetWirelessProperty(network_id , strenstr)))
+        net_dict['automatic'] = wireless.GetWirelessProperty(network_id , 'automatic')
+        
         
         if wireless.GetWirelessProperty(network_id , 'encryption'):
             net_dict['encrypt']= wireless.GetWirelessProperty(network_id ,'encryption_method')

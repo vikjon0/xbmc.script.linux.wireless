@@ -311,8 +311,8 @@
 			<posx>580</posx>
 			<posy>105</posy>
 			<control type="button" id="11">
-				<description>Hidden Network button</description>
-				<label>Hidden</label>
+				<description>button</description>
+				<label>Scan</label>
 				<posx>0</posx>
 				<posy>80</posy>
 				<width>200</width>
@@ -328,8 +328,8 @@
 				<ondown>9001</ondown>
 			</control>
 			<control type="button" id="13">
-				<description>Details Button</description>
-				<label>Details</label>
+				<description>Disconnect button</description>
+				<label>Disconnect</label>
 				<posx>0</posx>
 				<posy>40</posy>
 				<width>200</width>
@@ -346,7 +346,7 @@
 			</control>
 			<control type="button" id="14">
 				<description>Connect Button</description>
-				<label>Connect</label>
+				<label>Remove Auto</label>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>200</width>
