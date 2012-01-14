@@ -15,7 +15,7 @@ __cwd__ = sys.modules[ "__main__" ].__cwd__
 #enable localization
 getLS   = sys.modules[ "__main__" ].__language__
 
-#TODO Language conrol has to be re-added
+
 #TODO Connect to hidden network
 #TODO Re-add connect button and add connect dialog with more options
 #TODO Display network detail window
@@ -31,10 +31,7 @@ class GUI(xbmcgui.WindowXMLDialog):
         self.defineControls()
 
         self.status_msg = ""
-        self.status_label.setLabel("")
-
-        #self.hidden_button.setEnabled(False)
-        #self.details_button.setEnabled(False)
+        self.status_label.setLabel(self.status_msg)
 	
         self.showDialog()
                 
@@ -80,41 +77,41 @@ class GUI(xbmcgui.WindowXMLDialog):
         if controlId == self.control_list_id:
             position = self.list.getSelectedPosition()
             self.connect_wireless(position)
-            msg = "Refreshing...." 
+            msg = getLS(30115) #Refreshing
             self.status_label.setLabel(msg)
             self.updateList()
-            msg = "Done!" 
+            msg = getLS(30116) #Done
             self.status_label.setLabel(msg) 
        
         #remove auto button
         elif controlId == self.control_remove_auto_button_id:
             position = self.list.getSelectedPosition()
             self.remove_auto(position)
-            msg = "Refreshing...." 
+            msg = getLS(30115) #Refreshing
             self.status_label.setLabel(msg)
             self.updateList()
-            msg = "Done!" 
+            msg = getLS(30116) #Done
             self.status_label.setLabel(msg)
         
         #scan button
         elif controlId == self.control_scan_button_id:
-            msg = "Refreshing...." 
+            msg = getLS(30115) #Refreshing
             self.status_label.setLabel(msg)
             self.updateList()
-            msg = "Done!" 
+            msg = getLS(30116) #Done
             self.status_label.setLabel(msg)
         
         #disconnect button
         elif controlId == self.control_disconnect_button_id:
-            msg = "Disconnecting...." 
+            msg = getLS(30117) #Disconnecting
             self.status_label.setLabel(msg)
             self.disconnect()
             
-            msg = "Refreshing...." 
+            msg = getLS(30115) #Refreshing
             self.status_label.setLabel(msg)
             self.updateList()
             
-            msg = "Done!" 
+            msg = getLS(30116) #Done
             self.status_label.setLabel(msg)
             
         #cancel dialog
@@ -147,12 +144,12 @@ class GUI(xbmcgui.WindowXMLDialog):
             self.status_label.setLabel(msg)
             return
         
-        msg = "Connecting....."  
+        msg = getLS(30118) #Connecting
         self.status_label.setLabel(msg)
 
         qf_wicd_wrapper.connect_wireless(network_id,key)
 
-        msg = "Finished connecting" 
+        msg = getLS(30113) #connection attempt made
         self.status_label.setLabel(msg)
         
         return
@@ -164,12 +161,12 @@ class GUI(xbmcgui.WindowXMLDialog):
 
 
     def remove_auto(self, network_id):
-        msg = "Configuring....."  
+        msg = getLS(30119) #Configuring
         self.status_label.setLabel(msg)
      
         qf_wicd_wrapper.remove_auto(network_id)
      
-        msg = "Finished removing auto" 
+        msg = getLS(30116) #Done
         self.status_label.setLabel(msg)   
         return
 

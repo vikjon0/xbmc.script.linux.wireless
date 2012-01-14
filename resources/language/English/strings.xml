@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
-    <string id="610">Install wicd</string>
+  <string id="610">Remove Auto</string>
   <string id="611">Connect to Wireless</string>
-  <string id="612">Test network</string>
-  <string id="613">Run</string>
-  <string id="614">Exit</string>
-  <string id="615">615remove me</string>
-  
+  <string id="612">Disconnect</string>
+  <string id="613">Scan</string>
+  <string id="614">SSID</string>
+  <string id="615">CHNL</string>
+  <string id="616">ENCRYPTION</string>
+  <string id="617">SIGNAL</string>
+  <string id="618">ENCRYPTION</string>
+  <string id="619">SIGNAL</string>
+
   <string id="30100">General</string>
   <string id="30101">Enter password</string>
   <string id="30102">Installing</string>
@@ -19,9 +23,14 @@
   <string id="30109">You have not entered any key</string>
   <string id="30110">Internet is accessable!</string>
   <string id="30111">Internet is not accessable</string>
-  <string id="30112">Please wait.....</string>
+  <string id="30112">Please wait...</string>
   <string id="30113">Connection attempt made</string>
   <string id="30114">Unix username</string>
+  <string id="30115">Refreshing...</string>
+  <string id="30116">Done!</string>
+  <string id="30117">Disconnecting....</string>
+  <string id="30118">Connecting...</string>
+  <string id="30119">Saving Config...</string>
   <string id="99999"></string>
 
 
