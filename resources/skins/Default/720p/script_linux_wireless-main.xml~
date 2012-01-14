@@ -384,7 +384,6 @@
 			</control>
 			<control type="button" id="19">
 				<description>Cancel Button</description>
-				<visible>false</visible>
 				<posx>200</posx>
 				<posy>355</posy>
 				<width>200</width>

@@ -1,7 +1,8 @@
-
+[B]Version 11.0.0[/B]
+Upgraded to Eden - initial version
 
 [B]Version 0.0.7[/B]
-Eden and external python - initial version
+External python - initial version
 
 [B]Version 0.0.6[/B]
 Dummy update - no changes
